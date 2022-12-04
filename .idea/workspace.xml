@@ -4,14 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="433d4da6-50cc-4e57-8a5d-4a2903e6ec21" name="Changes" comment="" />
+    <list default="true" id="433d4da6-50cc-4e57-8a5d-4a2903e6ec21" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/config/MySessionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Actor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Country.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Feature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Film.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/FilmText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Language.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Rating.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spy.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2IRbdt8QWmXBg91NJnohNUyLMIt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -25,9 +55,43 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "c95df768-296e-4957-a693-a4bcf4c45ae9"
+    ]
   }
 }]]></component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="project-hibernate-2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dump-hibernate-2.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$USER_HOME$/Downloads/JavaRush/dump-hibernate-2.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="c95df768-296e-4957-a693-a4bcf4c45ae9" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Database Script.dump-hibernate-2.sql" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -36,8 +100,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670147435343</updated>
+      <workItem from="1670147436782" duration="5017000" />
+      <workItem from="1670152479027" duration="9745000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1670147536512</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670147536512</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -49,5 +126,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
