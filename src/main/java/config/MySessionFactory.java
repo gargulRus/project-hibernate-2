@@ -1,8 +1,6 @@
 package config;
 
-import entitys.Category;
-import entitys.City;
-import entitys.Country;
+import entitys.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
@@ -18,8 +16,9 @@ public class MySessionFactory {
         Properties properties = new Properties();
         properties.put(Environment.DRIVER, "com.p6spy.engine.spy.P6SpyDriver");
         properties.put(Environment.URL, "jdbc:p6spy:mysql://localhost:3306/movie");
-        properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
-        properties.put(Environment.HBM2DDL_AUTO, "update");
+        properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");
+        properties.put(Environment.HBM2DDL_AUTO, "validate");
+        properties.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
         properties.put("hibernate.connection.useUnicode", true);
         properties.put("hibernate.connection.characterEncoding", "UTF-8");
         properties.put("hibernate.connection.charSet", "UTF-8");
@@ -27,10 +26,21 @@ public class MySessionFactory {
         properties.put(Environment.PASS, "");
 
         sessionFactory = new Configuration()
-                .setProperties(properties)
-                .addAnnotatedClass(Country.class)
-                .addAnnotatedClass(City.class)
+                .addAnnotatedClass(Actor.class)
+                .addAnnotatedClass(Address.class)
                 .addAnnotatedClass(Category.class)
+                .addAnnotatedClass(City.class)
+                .addAnnotatedClass(Country.class)
+                .addAnnotatedClass(Customer.class)
+                .addAnnotatedClass(Film.class)
+                .addAnnotatedClass(FilmText.class)
+                .addAnnotatedClass(Inventory.class)
+                .addAnnotatedClass(Language.class)
+                .addAnnotatedClass(Payment.class)
+                .addAnnotatedClass(Rental.class)
+                .addAnnotatedClass(Staff.class)
+                .addAnnotatedClass(Store.class)
+                .setProperties(properties)
                 .buildSessionFactory();
     }
 

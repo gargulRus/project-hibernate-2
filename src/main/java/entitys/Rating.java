@@ -9,6 +9,10 @@ public enum Rating {
 
     private String value;
 
+    public String getValue() {
+        return value;
+    }
+
     Rating(String value) {
         this.value = value;
     }

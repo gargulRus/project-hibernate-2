@@ -1,35 +1,27 @@
 package entitys;
 
-import com.sun.istack.NotNull;
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.UpdateTimestamp;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
-@Table(name="Country")
+@Table(name = "Country")
 @Getter
 @Setter
-@NoArgsConstructor
-@EqualsAndHashCode
 public class Country {
 
-    @Column(name = "country_id")
     @Id
+    @Column(name = "country_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotNull
-    private Long id;
+    private Short countryId;
 
     @Column(name = "country")
-    @NotNull
     private String country;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="last_update", nullable = false,
-            columnDefinition="TIMESTAMP default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP")
-    private Date last_update;
-
+    @Column(name = "last_update")
+    @UpdateTimestamp
+    private LocalDateTime lastUpdate;
 }

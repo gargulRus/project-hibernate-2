@@ -1,10 +1,7 @@
 package entitys;
 
-import com.sun.istack.NotNull;
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -12,37 +9,36 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.Year;
+import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
+
+import static java.util.Objects.isNull;
 
 @Entity
 @Table(name = "film")
 @Getter
 @Setter
-@NoArgsConstructor
-@EqualsAndHashCode
 public class Film {
 
     @Id
     @Column(name = "film_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotNull
-    private Long filmId;
+    private Short filmId;
 
     @Column(name = "title")
-    @NotNull
     private String title;
 
     @Column(name = "description", columnDefinition = "text")
     @Type(type = "text")
     private String description;
 
-    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "release_year", columnDefinition = "year")
+    @Convert(converter = YearAttributeConverter.class)
     private Year releaseYear;
 
     @ManyToOne
     @JoinColumn(name = "language_id")
-    @NotNull
     private Language language;
 
     @ManyToOne
@@ -50,22 +46,19 @@ public class Film {
     private Language originalLanguage;
 
     @Column(name = "rental_duration")
-    @NotNull
     private Byte rentalDuration;
 
     @Column(name = "rental_rate")
-    @NotNull
     private BigDecimal rentalRate;
 
     @Column(name = "length")
     private Short length;
 
     @Column(name = "replacement_cost")
-    @NotNull
     private BigDecimal replacementCost;
 
     @Column(name = "rating", columnDefinition = "enum('G', 'PG', 'PG-13', 'R', 'NC-17')")
-    @Enumerated(EnumType.STRING)
+    @Convert(converter = RatingConverter.class)
     private Rating rating;
 
     @Column(name = "special_features", columnDefinition = "set('Trailers', 'Commentaries', 'Deleted Scenes', 'Behind the Scenes')")
@@ -87,4 +80,25 @@ public class Film {
             inverseJoinColumns = @JoinColumn(name = "category_id", referencedColumnName = "category_id"))
     private Set<Category> categories;
 
+    public Set<Feature> getSpecialFeatures() {
+        if (isNull(specialFeatures) || specialFeatures.isEmpty()) {
+            return null;
+        }
+
+        Set<Feature> result = new HashSet<>();
+        String[] features = specialFeatures.split(",");
+        for (String feature : features) {
+            result.add(Feature.getFeatureByValue(feature));
+        }
+        result.remove(null);
+        return result;
+    }
+
+    public void setSpecialFeatures(Set<Feature> features) {
+        if (isNull(features)) {
+            specialFeatures = null;
+        } else {
+            specialFeatures = features.stream().map(Feature::getValue).collect((Collectors.joining(",")));
+        }
+    }
 }

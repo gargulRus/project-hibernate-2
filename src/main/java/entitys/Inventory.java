@@ -8,22 +8,24 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "city")
+@Table(name = "inventory")
 @Getter
 @Setter
-public class City {
+public class Inventory {
 
     @Id
+    @Column(name = "inventory_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "city_id")
-    private Short cityId;
-
-    @Column(name = "city")
-    private String city;
+    private Integer inventoryId;
 
     @ManyToOne
-    @JoinColumn(name = "country_id")
-    private Country country;
+    @JoinColumn(name = "film_id")
+    private Film film;
+
+    @ManyToOne
+    @JoinColumn(name = "store_id")
+    private Store store;
+
 
     @Column(name = "last_update")
     @UpdateTimestamp

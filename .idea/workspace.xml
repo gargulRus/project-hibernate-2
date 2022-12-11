@@ -5,24 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="433d4da6-50cc-4e57-8a5d-4a2903e6ec21" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/config/MySessionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Actor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Feature.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Film.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/FilmText.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Language.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Rating.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spy.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ActorDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/AddressDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CategoryDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CityDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CountryDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/FilmDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/FilmTextDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/GenericDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/InventoryDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/LanguageDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/PaymentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/RentalDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/StaffDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/StoreDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Inventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/RatingConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Rental.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Staff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/Store.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entitys/YearAttributeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/MySessionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/MySessionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entitys/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entitys/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entitys/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entitys/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entitys/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entitys/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entitys/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entitys/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entitys/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entitys/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entitys/FilmText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entitys/FilmText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entitys/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entitys/Language.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entitys/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entitys/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spy.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spy.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +76,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -71,6 +91,12 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="entitys" />
+      <recent name="dao" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -102,6 +128,7 @@
       <updated>1670147435343</updated>
       <workItem from="1670147436782" duration="5017000" />
       <workItem from="1670152479027" duration="9745000" />
+      <workItem from="1670752351573" duration="17340000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1670147536512</created>
@@ -130,5 +157,20 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassCastException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="entitys.Address" memberName="city" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
